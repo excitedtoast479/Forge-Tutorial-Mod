@@ -26,6 +26,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(1, 10)), ModCreativeModeTab.TUTORIAL_TAB);
 
+    public static final RegistryObject<Block> MYTHRIL_BLOCK = registerBlock("mythril_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
