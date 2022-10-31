@@ -2,6 +2,8 @@ package com.excitedtoast479.tutorialmod;
 
 import com.excitedtoast479.tutorialmod.block.ModBlocks;
 import com.excitedtoast479.tutorialmod.item.ModItems;
+import com.excitedtoast479.tutorialmod.world.feature.ModConfiguredFeatures;
+import com.excitedtoast479.tutorialmod.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +24,9 @@ public class TutorialMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModConfiguredFeatures.regsier(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
