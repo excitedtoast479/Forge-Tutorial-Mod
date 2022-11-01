@@ -24,7 +24,7 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_MYTHRIL_ORE.get().defaultBlockState())));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> MYTHRIL_ORE = CONFIGURED_FEATURES.register("mythril_ore",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_MYTHRIL_ORES.get(), 7)));
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_MYTHRIL_ORES.get(), 4)));
 
     public static void regsier(IEventBus eventBus) {
         CONFIGURED_FEATURES.register(eventBus);

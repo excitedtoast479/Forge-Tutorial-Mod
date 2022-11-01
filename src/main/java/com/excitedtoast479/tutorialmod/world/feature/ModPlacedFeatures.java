@@ -18,8 +18,8 @@ public class ModPlacedFeatures {
 
     public static final RegistryObject<PlacedFeature> MYTHRIL_ORE_PLACED = PLACED_FEATURES.register("mythril_ore_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.MYTHRIL_ORE.getHolder().get(),
-                    commonOrePlacement(2, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(20)))));
+                    commonOrePlacement(4, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.absolute(20)))));
 
     private static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
         return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
