@@ -26,6 +26,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(1, 10)), ModCreativeModeTab.TUTORIAL_TAB);
 
+    public static final RegistryObject<Block> MEDIUM_VASE = registerBlock("med",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(1, 10)), ModCreativeModeTab.TUTORIAL_TAB);
+
     public static final RegistryObject<Block> DEEPSLATE_MYTHRIL_ORE = registerBlock("deepslate_mythril_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4f).requiresCorrectToolForDrops(), UniformInt.of(1, 10)), ModCreativeModeTab.TUTORIAL_TAB);
