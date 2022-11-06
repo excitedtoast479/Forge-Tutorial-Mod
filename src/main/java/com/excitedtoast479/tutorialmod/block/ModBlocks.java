@@ -40,6 +40,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> MEDIUM_VASE = registerBlock("medium_vase",
             () -> new MediumVaseBlock(BlockBehaviour.Properties.of(Material.METAL)
                 .strength(2f).requiresCorrectToolForDrops().noOcclusion().sound(SoundType.GLASS)), ModCreativeModeTab.TUTORIAL_TAB);
+    
+    public static final RegistryObject<Block> ROTTEN_SPRUCE_PLANKS = registerBlock("rotten_spruce_planks",
+            () -> new Rotten_Planks(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2f, 3f).sound(SoundType.WOOD)), ModCreativeModeTab.TUTORIAL_TAB);
 
     public static final RegistryObject<Block> ROTTEN_SPRUCE_PLANKS = registerBlock("rotten_spruce_planks",
             () -> new Rotten_Planks(BlockBehaviour.Properties.of(Material.WOOD)
