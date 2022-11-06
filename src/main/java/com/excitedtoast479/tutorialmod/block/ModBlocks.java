@@ -44,10 +44,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> ROTTEN_SPRUCE_PLANKS = registerBlock("rotten_spruce_planks",
             () -> new Rotten_Planks(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2f, 3f).sound(SoundType.WOOD)), ModCreativeModeTab.TUTORIAL_TAB);
-
-    public static final RegistryObject<Block> ROTTEN_SPRUCE_PLANKS = registerBlock("rotten_spruce_planks",
-            () -> new Rotten_Planks(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2f, 3f).sound(SoundType.WOOD)), ModCreativeModeTab.TUTORIAL_TAB);
+   
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
