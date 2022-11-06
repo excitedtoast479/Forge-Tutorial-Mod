@@ -10,6 +10,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -37,7 +38,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MEDIUM_VASE = registerBlock("medium_vase",
             () -> new MediumVaseBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(2f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.TUTORIAL_TAB);
+                .strength(2f).requiresCorrectToolForDrops().noOcclusion().sound(SoundType.GLASS)), ModCreativeModeTab.TUTORIAL_TAB);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -1,10 +1,14 @@
 package com.excitedtoast479.tutorialmod;
 
 import com.excitedtoast479.tutorialmod.block.ModBlocks;
+import com.excitedtoast479.tutorialmod.block.entity.ModBlockEntities;
 import com.excitedtoast479.tutorialmod.item.ModItems;
+import com.excitedtoast479.tutorialmod.screen.MediumVaseScreen;
+import com.excitedtoast479.tutorialmod.screen.ModMenuTypes;
 import com.excitedtoast479.tutorialmod.world.feature.ModConfiguredFeatures;
 import com.excitedtoast479.tutorialmod.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -28,6 +32,9 @@ public class TutorialMod {
         ModConfiguredFeatures.regsier(modEventBus);
         ModPlacedFeatures.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -43,6 +50,8 @@ public class TutorialMod {
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+            MenuScreens.register(ModMenuTypes.MEDIUM_VASE_MENU.get(), MediumVaseScreen::new);
         }
     }
 }
